@@ -1,5 +1,8 @@
 # hivemed
 
+Bato, Alexander Q.
+CPE 204 - Software Design
+
 ## Project setup
 ```
 npm install

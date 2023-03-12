@@ -1,10 +1,7 @@
 <template>
-  <section class="doctors-section">
+  <section id="doctorSection" class="doctors-section">
     <h2>Our Registered Doctors</h2>
     <div class="doctors-container">
-      <div class="arrow left-arrow" @click="scrollLeft">
-        <i class="fa-solid fa-chevron-left"></i>
-      </div>
       <div class="doctors" ref="doctorsContainer">
         <div class="doctor-box" v-for="(doctor, index) in doctors" :key="index" :style="{transform: `translateX(${doctor.translateX}px)`}">
           <div class="doctor-box-info">
@@ -15,9 +12,6 @@
             <p>{{doctor.address}}</p>
           </div>
         </div>
-      </div>
-      <div class="arrow right-arrow" @click="scrollRight">
-        <i class="fa-solid fa-chevron-right"></i>
       </div>
       <div class="doctor-btn"><a href="viewMore-btn"><button class="viewMore-btn">View More</button></a></div>
     </div>
@@ -172,8 +166,9 @@ export default {
   background: linear-gradient(var(--secondary-bg-color),var(--bg-color));
 }
 .doctors-section h2 {
-  padding: 3rem 0;
+  padding: 2rem 0;
   font-size: 2rem;
+  font-weight: bolder;
 }
 .doctors-container {
   display: flex;
@@ -217,7 +212,7 @@ export default {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   margin: .5rem;
-  border: solid var(--primary-color);
+  border: 5px solid var(--font-color);
   border-radius: 10px;
   height: 30rem;
   margin-top: -15rem;
@@ -228,7 +223,7 @@ export default {
   height: 25rem;
   display: inline-block;
   vertical-align: top;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--primary-color);
   border-radius: 15px;
   padding: 3rem 0;
   margin: 2rem 5rem;
@@ -240,11 +235,14 @@ export default {
 }
 
 .doctor-box-info h3 {
-  margin-top: 1rem;
+  margin: 1rem 0;
+  color: var(--secondary-bg-color);
+  font-weight: bold;
 }
 
 .doctor-box-info p {
   padding: .25rem;
+  color: var(--font-color);
 }
 
 .viewMore-btn {
@@ -260,9 +258,14 @@ export default {
 }
 .doctors-section button {
 position: absolute;
-bottom: -100rem;
+bottom: -96rem;
 left: 50%;
 transform: translateX(-50%);
+}
+.doctors-section button:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-bg-color);
+    border-bottom: 2px solid var(--font-color);
 }
 
 

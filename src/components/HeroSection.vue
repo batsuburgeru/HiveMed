@@ -11,7 +11,6 @@
       <div class="hero-btn">
         <button class="register-btn" type="button">Get started now!</button>
       </div>
-
       <div class="container">
   <div class="box box3">
     <img src='../assets/prescription.jpg' alt=''>
@@ -44,20 +43,22 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 .hero {
-    background: linear-gradient(to right,var(--bg-color),var(--secondary-color));
+    background-image: url("../assets/hero-bg-img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100vh;
     width: 100vw;
     margin: 0; 
     padding: 0;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
 }
-
 .hero-tagline {
     padding-left: 3rem;
     font-weight: var(--bolder-font);
     font-size: 3rem;
-    color: var(--primary-color);
+    color: var(--font-color);
     text-decoration: none;
     position: absolute;
     top: 45%;
@@ -75,7 +76,7 @@
     padding-right: 42%;
     font-weight: var(--bold-font);
     font-size: 1.5rem;
-    color: var(--font-color);
+    color: rgb(230, 230, 230);
     text-decoration: none;
     text-align: justify;
     position: absolute;
@@ -106,11 +107,9 @@
 
 .container {
   position: absolute;
-  /* to get a regualr hexagon with clip-path use the same scale, width is sqrt(3) / 2 of the height  */
   width: calc(var(--size) * 0.866);
   height: var(--size);
 }
-
 .box {
   overflow: hidden;
   position: absolute;
@@ -128,6 +127,7 @@ img {
   transform-origin: center;
   object-fit: contain;
   transition: all .5s ease-out;
+
 }
 .box1 img {
   height: 100vh;

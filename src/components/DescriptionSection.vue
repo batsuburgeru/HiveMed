@@ -1,5 +1,5 @@
 <template>
-    <section class="desc">
+    <section id="descSection" class="desc">
   <div class="brief-desc">
     <h2>Why Choose HiveMed?</h2>
     <p>

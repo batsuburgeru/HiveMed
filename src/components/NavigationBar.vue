@@ -1,14 +1,14 @@
 <template>
     <nav>
-         <a href="#hero" class="logo"><h1 class="logo">HiveMed</h1></a>
-      <ul class="navbar">
+         <a href="#hero" class="nav-logo"><h1 class="logo">HiveMed</h1></a>
+      <ul class="navbar-ul">
         <li><a href="#" class="navbar-links">Book an Appointment</a></li>
         <li>
-          <a href="#" class="navbar-links">Doctors</a>
+          <a href="#doctorSection" class="navbar-links">Doctors</a>
         </li>
-        <li><a href=" " class="navbar-links">Pharmacies</a></li>
+        <li><a href="#pharmacySection" class="navbar-links">Pharmacies</a></li>
         <li>
-          <a href="#" class="navbar-links">About Us</a>
+          <a href="#descSection" class="navbar-links">About Us</a>
         </li>
       </ul>
       <a href="nav-button"><button class="nav-button">Login</button></a>
@@ -20,6 +20,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+.logo {
+    font-weight: bolder;
 }
 ul {
     list-style-type: none;
@@ -44,8 +47,7 @@ nav {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     background-color: var(--secondary-bg-color);
 }
-
-.logo {
+.nav-logo {
     margin-right: auto;
 }
 nav a {
@@ -61,6 +63,7 @@ nav ul {
 nav ul li {
     font-weight: var(--bold-font);
     margin-right: 1rem;
+    padding-right: 1rem;
 }
 
 nav a:hover{
